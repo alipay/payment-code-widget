@@ -11,7 +11,7 @@ android {
         minSdkVersion 17
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName project.getProperty("libraryVersion")
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -31,12 +31,21 @@ dependencies {
 
     implementation 'com.google.zxing:core:3.3.2'
 
-    testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 }
 
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets
+}
+
+artifacts {
+    archives sourcesJar
+}
+
 // Bintray
+version = libraryVersion
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
