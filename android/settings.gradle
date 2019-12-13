@@ -1,0 +1,2 @@
+include ':app', ':cgcp-widget'
+rootProject.name='payment-code-widget'
