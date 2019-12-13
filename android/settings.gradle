@@ -1,2 +1,1 @@
-include ':app', ':cgcp-widget'
-rootProject.name='payment-code-widget'
+include ':app', ':payment-code-widget'

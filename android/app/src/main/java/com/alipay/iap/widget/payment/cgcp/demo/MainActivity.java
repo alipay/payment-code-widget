@@ -1,4 +1,4 @@
-package com.alipay.iap.cgcp.demo;
+package com.alipay.iap.widget.payment.cgcp.demo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
