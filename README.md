@@ -9,6 +9,14 @@ To make sure that the scanner can easily read the payment code and let mobile us
  - Alipay CGCP (Contactless Gateway Code Protocol)
 
 ## How to use
+### Installation
+```
+// Add the dependency in your build.gradle
+dependencies {
+    ...
+    implementation 'com.alipay.iap:payment-code-widget:1.0.0'
+}
+```
 ### BarcodeView
 Use the BarcodeView in the layout xml file.
 ```
